@@ -6,12 +6,7 @@ A web-based AI application to analyze **movie review sentiment**
 
 
 
----
 
-## 🚀 Live Demo
-🔗 [https://mr22xx.pythonanywhere.com/]
-
----
 
 ## 🧠 Features
 - 🎭 Sentiment classification (Positive / Negative)
