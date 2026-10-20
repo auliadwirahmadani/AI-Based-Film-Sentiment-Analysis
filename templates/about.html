@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | SentimentAI Movies NLP Architecture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<!-- Ambient Glow Elements -->
+<div class="ambient-glow glow-cyan"></div>
+<div class="ambient-glow glow-purple"></div>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="/" class="logo">
+            <span class="logo-icon">🎬</span>
+            <span class="logo-text">Sentiment<span class="gradient-text">AI</span></span>
+            <span class="badge-version">v2.0</span>
+        </a>
+
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="/" class="nav-link">Home</a></li>
+            <li><a href="/#features" class="nav-link">Features</a></li>
+            <li><a href="/#analyzer" class="nav-link">Analyzer</a></li>
+            <li><a href="/about" class="nav-link active">About Project</a></li>
+        </ul>
+
+        <div class="nav-cta">
+            <a href="/#analyzer" class="btn-nav">Test Review</a>
+        </div>
+
+        <div class="hamburger" id="hamburger" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- ABOUT HERO -->
+<section class="about-hero">
+    <div class="about-hero-content">
+        <span class="section-tag">Technical Architecture</span>
+        <h1 class="about-title">Inside the <span class="gradient-text">SentimentAI Engine</span></h1>
+        <p class="about-subtitle">
+            An end-to-end Natural Language Processing system converting unstructured movie reviews into calibrated emotional polarity classifications.
+        </p>
+    </div>
+</section>
+
+<!-- MAIN ABOUT CONTENT -->
+<main class="about-container">
+    
+    <!-- PIPELINE SECTION -->
+    <section class="about-section glass-card">
+        <div class="section-header-compact">
+            <span class="badge-pill">End-to-End Workflow</span>
+            <h2>Machine Learning Pipeline</h2>
+            <p>From raw user text input to confidence-scored sentiment prediction:</p>
+        </div>
+
+        <div class="pipeline-grid">
+            <div class="pipeline-step">
+                <div class="step-number">01</div>
+                <div class="step-icon">✍️</div>
+                <h4>Review Ingestion</h4>
+                <p>User inputs movie review via asynchronous AJAX POST request.</p>
+            </div>
+            <div class="pipeline-arrow">➔</div>
+
+            <div class="pipeline-step">
+                <div class="step-number">02</div>
+                <div class="step-icon">🧹</div>
+                <h4>Text Preprocessing</h4>
+                <p>Lowercase conversion and regex cleaning to filter punctuation and non-alphabetic noise.</p>
+            </div>
+            <div class="pipeline-arrow">➔</div>
+
+            <div class="pipeline-step">
+                <div class="step-number">03</div>
+                <div class="step-icon">🔢</div>
+                <h4>TF-IDF Vectorizer</h4>
+                <p>Computes term frequency-inverse document frequency over 5,000 unigram/bigram features.</p>
+            </div>
+            <div class="pipeline-arrow">➔</div>
+
+            <div class="pipeline-step">
+                <div class="step-number">04</div>
+                <div class="step-icon">🧠</div>
+                <h4>Logistic Regression</h4>
+                <p>Evaluates linear decision boundary using sigmoid log-odds calculation.</p>
+            </div>
+            <div class="pipeline-arrow">➔</div>
+
+            <div class="pipeline-step">
+                <div class="step-number">05</div>
+                <div class="step-icon">🎯</div>
+                <h4>Output & Confidence</h4>
+                <p>Extracts predicted class (POSITIF / NEGATIF) and probability confidence score.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPECS & TECH STACK GRID -->
+    <div class="two-column-grid">
+        <!-- Model Specifications -->
+        <section class="about-card glass-card">
+            <div class="card-title-wrap">
+                <span class="card-icon">⚙️</span>
+                <h3>Model Hyperparameters & Specs</h3>
+            </div>
+            
+            <div class="spec-list">
+                <div class="spec-item">
+                    <span class="spec-label">Algorithm</span>
+                    <span class="spec-value">Logistic Regression (L-BFGS)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Feature Extraction</span>
+                    <span class="spec-value">TF-IDF (Term Frequency-IDF)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">N-gram Range</span>
+                    <span class="spec-value">(1, 2) [Unigram + Bigram]</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Max Vocabulary</span>
+                    <span class="spec-value">5,000 features</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Stop Words</span>
+                    <span class="spec-value">English standard filter</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Dataset Split</span>
+                    <span class="spec-value">80% Train &bull; 20% Test</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Evaluation Metric</span>
+                    <span class="spec-value">Accuracy & Probability Score</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="about-card glass-card">
+            <div class="card-title-wrap">
+                <span class="card-icon">🛠️</span>
+                <h3>Full Technology Stack</h3>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <div class="tech-logo">🐍</div>
+                    <div class="tech-info">
+                        <strong>Python 3</strong>
+                        <small>Core Backend & Analytics</small>
+                    </div>
+                </div>
+
+                <div class="tech-item">
+                    <div class="tech-logo">🔬</div>
+                    <div class="tech-info">
+                        <strong>Scikit-Learn</strong>
+                        <small>Model Training & Evaluation</small>
+                    </div>
+                </div>
+
+                <div class="tech-item">
+                    <div class="tech-logo">🌶️</div>
+                    <div class="tech-info">
+                        <strong>Flask Web Server</strong>
+                        <small>Microservices REST API</small>
+                    </div>
+                </div>
+
+                <div class="tech-item">
+                    <div class="tech-logo">🐼</div>
+                    <div class="tech-info">
+                        <strong>Pandas</strong>
+                        <small>Data Processing & Extraction</small>
+                    </div>
+                </div>
+
+                <div class="tech-item">
+                    <div class="tech-logo">🎨</div>
+                    <div class="tech-info">
+                        <strong>Modern CSS3 & JS</strong>
+                        <small>Glassmorphism & Asynchronous UI</small>
+                    </div>
+                </div>
+
+                <div class="tech-item">
+                    <div class="tech-logo">📦</div>
+                    <div class="tech-info">
+                        <strong>Pickle Serialization</strong>
+                        <small>Pre-trained Artifact Persistence</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- AUTHOR & PURPOSE SECTION -->
+    <section class="about-author glass-card">
+        <div class="author-avatar">
+            <span>👨‍💻</span>
+        </div>
+        <div class="author-details">
+            <span class="badge-pill">Project Creator</span>
+            <h3>Aulia Dwi Rahmadani</h3>
+            <p class="author-role">AI & Data Science Enthusiast &bull; Undergraduate Student</p>
+            <p class="author-bio">
+                This project was created as an applied Machine Learning & NLP portfolio project, illustrating the transition from exploratory data analysis and model training to deployment in an interactive web application.
+            </p>
+            <div class="author-actions">
+                <a href="/" class="btn-primary">
+                    <span>🎬 Back to Sentiment Classifier</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <div class="logo">
+                <span class="logo-icon">🎬</span>
+                <span class="logo-text">Sentiment<span class="gradient-text">AI</span></span>
+            </div>
+            <p class="footer-sub">Natural Language Processing & Machine Learning for Film Reviews.</p>
+        </div>
+        <div class="footer-links">
+            <a href="/">Home</a>
+            <a href="/#features">Features</a>
+            <a href="/#analyzer">Analyzer</a>
+            <a href="/about">About</a>
+        </div>
+        <div class="footer-bottom">
+            <p id="footer-text">SentimentAI Movies</p>
+        </div>
+    </div>
+</footer>
+
+<script src="/static/script1.js"></script>
+</body>
+</html>

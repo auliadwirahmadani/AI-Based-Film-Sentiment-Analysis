@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SentimentAI Movies | Machine Learning Review Classifier</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<!-- Ambient Glow Elements -->
+<div class="ambient-glow glow-cyan"></div>
+<div class="ambient-glow glow-purple"></div>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="/" class="logo">
+            <span class="logo-icon">🎬</span>
+            <span class="logo-text">Sentiment<span class="gradient-text">AI</span></span>
+            <span class="badge-version">v2.0</span>
+        </a>
+
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="#hero" class="nav-link active">Home</a></li>
+            <li><a href="#features" class="nav-link">Features</a></li>
+            <li><a href="#analyzer" class="nav-link">Analyzer</a></li>
+            <li><a href="/about" class="nav-link">About Project</a></li>
+        </ul>
+
+        <div class="nav-cta">
+            <a href="#analyzer" class="btn-nav">Test Review</a>
+        </div>
+
+        <div class="hamburger" id="hamburger" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero" id="hero">
+    <div class="hero-content">
+        <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            NLP-Powered Sentiment Intelligence
+        </div>
+
+        <h1 class="hero-title">
+            Decode Movie Emotions with <span class="gradient-text">Machine Learning</span>
+        </h1>
+
+        <p class="hero-subtitle">
+            Harnessing Logistic Regression and TF-IDF to predict audience sentiment from film reviews in real-time with confidence probability scores.
+        </p>
+
+        <div class="hero-actions">
+            <a href="#analyzer" class="btn-primary">
+                <span>⚡ Try Live Analyzer</span>
+            </a>
+            <a href="/about" class="btn-secondary">
+                <span>🔍 How It Works</span>
+            </a>
+        </div>
+
+        <!-- Floating Stats Pills -->
+        <div class="hero-stats">
+            <div class="stat-pill">
+                <span class="stat-number">5,000+</span>
+                <span class="stat-label">TF-IDF Features</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-pill">
+                <span class="stat-number">&lt; 50ms</span>
+                <span class="stat-label">Inference Time</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-pill">
+                <span class="stat-number">2-Class</span>
+                <span class="stat-label">Positive / Negative</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section class="features" id="features">
+    <div class="section-header">
+        <span class="section-tag">Key Capabilities</span>
+        <h2 class="section-title">Architected for Accurate Text Classification</h2>
+        <p class="section-desc">Trained on real audience reviews with advanced natural language preprocessing.</p>
+    </div>
+
+    <div class="feature-grid">
+        <div class="feature-card glass-card">
+            <div class="card-icon-wrap icon-purple">
+                <span>🤖</span>
+            </div>
+            <h3>Logistic Regression</h3>
+            <p>Optimized linear classifier providing robust decision boundaries for sentiment polarization.</p>
+            <div class="card-tag">Model Core</div>
+        </div>
+
+        <div class="feature-card glass-card">
+            <div class="card-icon-wrap icon-cyan">
+                <span>📊</span>
+            </div>
+            <h3>TF-IDF Vectorization</h3>
+            <p>Transforms raw unstructured text into high-dimensional bi-gram feature matrices.</p>
+            <div class="card-tag">NLP Pipeline</div>
+        </div>
+
+        <div class="feature-card glass-card">
+            <div class="card-icon-wrap icon-amber">
+                <span>⚡</span>
+            </div>
+            <h3>Confidence Meter</h3>
+            <p>Outputs calibrated probability percentages indicating prediction certainty for every review.</p>
+            <div class="card-tag">Probability</div>
+        </div>
+    </div>
+</section>
+
+<!-- ANALYZER SECTION -->
+<section class="analyzer" id="analyzer">
+    <div class="analyzer-wrapper">
+        <div class="section-header">
+            <span class="section-tag">Interactive Demo</span>
+            <h2 class="section-title">Analyze Movie Review Sentiment</h2>
+            <p class="section-desc">Type your custom review or click one of the preset sample reviews below.</p>
+        </div>
+
+        <!-- Quick Sample Review Chips -->
+        <div class="samples-container glass-card">
+            <span class="samples-title">💡 Quick Test Presets:</span>
+            <div class="chips-grid">
+                <button type="button" class="sample-chip chip-positive" data-text="A true cinematic masterpiece with brilliant acting, stunning visuals, and an unforgettable musical score.">
+                    <span>🌟</span> Masterpiece (+ Positive)
+                </button>
+                <button type="button" class="sample-chip chip-positive" data-text="An entertaining and heartwarming film with great comedic timing and great characters throughout.">
+                    <span>🍿</span> Entertaining (+ Positive)
+                </button>
+                <button type="button" class="sample-chip chip-negative" data-text="Terrible plot, wooden acting, and a complete waste of two hours. Extremely disappointing film.">
+                    <span>👎</span> Terrible (- Negative)
+                </button>
+                <button type="button" class="sample-chip chip-negative" data-text="Boring pacing and confusing story from start to finish. I could barely stay awake watching this.">
+                    <span>😴</span> Dull & Boring (- Negative)
+                </button>
+            </div>
+        </div>
+
+        <!-- Input Form Card -->
+        <div class="analyzer-card glass-card">
+            <form id="sentiment-form" class="ai-form">
+                <div class="textarea-header">
+                    <label for="text-input" class="input-label">
+                        <span>📝 Movie Review Text</span>
+                    </label>
+                    <button type="button" id="clear-btn" class="clear-btn" title="Clear text">
+                        Clear ✕
+                    </button>
+                </div>
+
+                <div class="input-wrapper">
+                    <textarea 
+                        id="text-input" 
+                        placeholder="Write or paste a movie review in English... (minimum 3 words)&#10;e.g., 'The acting was exceptional and the storyline kept me hooked until the final scene.'"
+                        required></textarea>
+                </div>
+
+                <div class="input-footer">
+                    <div class="counter-badge" id="counter-badge">
+                        <span id="word-count">0 words</span> &bull; <span id="char-count">0 characters</span>
+                    </div>
+                    <span class="input-hint" id="input-hint">At least 3 words required</span>
+                </div>
+
+                <button type="submit" id="submit-btn" class="btn-analyze">
+                    <span class="btn-icon">✨</span>
+                    <span class="btn-text">Analyze Sentiment with AI</span>
+                </button>
+            </form>
+
+            <!-- Loading Spinner State -->
+            <div id="loading" class="loading hidden">
+                <div class="spinner-ring">
+                    <div></div><div></div><div></div><div></div>
+                </div>
+                <p class="loading-text">Analyzing linguistic patterns & calculating confidence...</p>
+            </div>
+
+            <!-- Dynamic Result Container -->
+            <div id="result-box" class="result-box"></div>
+
+            <!-- Analysis History Container -->
+            <div class="history-section" id="history-section">
+                <div class="history-header">
+                    <h3>🕒 Recent Analyses</h3>
+                    <span class="history-sub">Last 5 predictions</span>
+                </div>
+                <div class="history-list" id="history-box">
+                    <div class="history-empty">No reviews analyzed yet. Try submitting one above!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <div class="logo">
+                <span class="logo-icon">🎬</span>
+                <span class="logo-text">Sentiment<span class="gradient-text">AI</span></span>
+            </div>
+            <p class="footer-sub">Natural Language Processing & Machine Learning for Film Reviews.</p>
+        </div>
+        <div class="footer-links">
+            <a href="#hero">Home</a>
+            <a href="#features">Features</a>
+            <a href="#analyzer">Analyzer</a>
+            <a href="/about">About</a>
+        </div>
+        <div class="footer-bottom">
+            <p id="footer-text">SentimentAI Movies</p>
+        </div>
+    </div>
+</footer>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
